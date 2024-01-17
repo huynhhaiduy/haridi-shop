@@ -9,6 +9,7 @@ import Paginate from '../components/Paginate'
 import ProductCarousel from '../components/ProductCarousel'
 import Meta from '../components/Meta'
 import { listProducts } from '../actions/productActions'
+import AppContact from '../components/Contact'
 
 const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword
@@ -34,7 +35,7 @@ const HomeScreen = ({ match }) => {
           Go Back
         </Link>
       )}
-      <h1>Latest Products</h1>
+      <h1 style={{marginTop:"70px"}}>Latest Products</h1>
       {loading ? (
         <Loader />
       ) : error ? (
@@ -55,6 +56,7 @@ const HomeScreen = ({ match }) => {
           />
         </>
       )}
+      <AppContact />
     </>
   )
 }

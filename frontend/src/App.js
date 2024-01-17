@@ -1,4 +1,5 @@
 import React from 'react'
+import './index.css'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { Container } from 'react-bootstrap'
 import Header from './components/Header'
@@ -18,6 +19,8 @@ import UserEditScreen from './screens/UserEditScreen'
 import ProductListScreen from './screens/ProductListScreen'
 import ProductEditScreen from './screens/ProductEditScreen'
 import OrderListScreen from './screens/OrderListScreen'
+
+import './index.css';
 
 const App = () => {
   return (
@@ -58,7 +61,9 @@ const App = () => {
           <Route path='/' component={HomeScreen} exact />
         </Container>
       </main>
+      <footer id="footer">
       <Footer />
+      </footer>
     </Router>
   )
 }
